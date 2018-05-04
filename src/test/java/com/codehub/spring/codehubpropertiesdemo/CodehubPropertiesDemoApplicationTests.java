@@ -1,4 +1,4 @@
-package come.codehub.spring.codehubpropertiesdemo;
+package com.codehub.spring.codehubpropertiesdemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

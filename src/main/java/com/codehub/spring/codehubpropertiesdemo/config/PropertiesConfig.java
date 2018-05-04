@@ -1,4 +1,4 @@
-package come.codehub.spring.codehubpropertiesdemo.config;
+package com.codehub.spring.codehubpropertiesdemo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

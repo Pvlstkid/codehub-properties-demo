@@ -1,4 +1,4 @@
-package come.codehub.spring.codehubpropertiesdemo;
+package com.codehub.spring.codehubpropertiesdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

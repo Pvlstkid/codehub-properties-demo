@@ -15,6 +15,9 @@ public class CodehubPropertiesDemoApplication implements CommandLineRunner {
     @Value("${key.something}")
     private String injectedProperty;
 
+    @Value("${key.somethingelse}")
+    private String anotherInjectedProperty;
+
     @Value("${key.list}")
     private List<Integer> integerList;
 
@@ -28,6 +31,7 @@ public class CodehubPropertiesDemoApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("In main app value injected via @Value:" + injectedProperty);
+        System.out.println("In main app value injected from default application properties:" + anotherInjectedProperty);
         System.out.println("In main app value injected via Environment:" + env.getProperty("key.something"));
         System.out.println("In main app values list injected via @Value:" + integerList);
     }

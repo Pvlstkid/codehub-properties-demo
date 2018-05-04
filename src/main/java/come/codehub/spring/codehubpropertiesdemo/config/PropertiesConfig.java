@@ -20,6 +20,8 @@ public class PropertiesConfig {
     /*
         The PropertySourcesPlaceholderConfigurer is used to programmatically register more than one
         property files in the context. It does not registers properties to Environment like @PropertySource
+        With Spring 4.3 you do not need to explicitly define PropertySourcesPlaceholderConfigurer Bean for @Value
+        injections to be resolved.
      */
 
 /*    @Bean

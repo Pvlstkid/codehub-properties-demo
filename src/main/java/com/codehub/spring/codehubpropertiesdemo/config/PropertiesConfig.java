@@ -1,10 +1,10 @@
-package come.codehub.spring.codehubpropertiesdemo.config;
+package com.codehub.spring.codehubpropertiesdemo.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource("file:C:/external.properties")
+@PropertySource("file:C:/application.properties")
 public class PropertiesConfig {
 
     public PropertiesConfig() {

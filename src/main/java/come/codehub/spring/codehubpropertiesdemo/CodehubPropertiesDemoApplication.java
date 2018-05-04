@@ -16,6 +16,9 @@ public class CodehubPropertiesDemoApplication implements CommandLineRunner {
     @Value("${app.description}")
     private String description;
 
+    @Value("${external.property}")
+    private String external;
+
     @Autowired
     private Environment env;
 
@@ -27,5 +30,6 @@ public class CodehubPropertiesDemoApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Application's name is: " + appName);
         System.out.println(description);
+        System.out.println(external);
     }
 }

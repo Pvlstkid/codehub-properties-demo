@@ -5,16 +5,23 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.convert.ConversionService;
+import org.springframework.core.convert.support.DefaultConversionService;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 @Configuration
-@PropertySource("classpath:bar.properties")
+@PropertySource("classpath:foo.properties")
 //@PropertySources({@PropertySource("classpath:bar.properties"), @PropertySource("classpath:foo.properties")})
 public class PropertiesConfig {
 
     public PropertiesConfig() {
         super();
+    }
+
+    @Bean
+    public ConversionService conversionService() {
+        return new DefaultConversionService();
     }
 
     /*

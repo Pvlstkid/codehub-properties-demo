@@ -1,4 +1,4 @@
-package come.codehub.spring.codehubpropertiesdemo;
+package com.codehub.spring.codehubpropertiesdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

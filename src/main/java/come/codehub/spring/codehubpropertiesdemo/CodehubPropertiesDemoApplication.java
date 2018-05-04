@@ -7,16 +7,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
-import java.util.List;
-
 @SpringBootApplication
 public class CodehubPropertiesDemoApplication implements CommandLineRunner {
 
-    @Value("${key.something}")
-    private String injectedProperty;
+    @Value("${app.name}")
+    private String appName;
 
-    @Value("${key.list}")
-    private List<Integer> integerList;
+    @Value("${app.description}")
+    private String description;
 
     @Autowired
     private Environment env;
@@ -27,8 +25,7 @@ public class CodehubPropertiesDemoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("In main app value injected via @Value:" + injectedProperty);
-        System.out.println("In main app value injected via Environment:" + env.getProperty("key.something"));
-        System.out.println("In main app values list injected via @Value:" + integerList);
+        System.out.println("Application's name is: " + appName);
+        System.out.println(description);
     }
 }

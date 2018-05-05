@@ -2,18 +2,28 @@ package com.codehub.spring.codehubpropertiesdemo.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Map;
 
 @Configuration
 @ConfigurationProperties(prefix = "mail")
+@Validated
 public class PropertiesConfig {
 
     public static class Credentials {
+
         private String authMethod;
+
+        @NotNull
         private String username;
+
+        @NotNull
         private String password;
 
         public String getAuthMethod() {
@@ -43,9 +53,14 @@ public class PropertiesConfig {
         // standard getters and setters
     }
 
+    @Email
     private String host;
+
+    @Min(1025)
+    @Max(65536)
     private int port;
     private String from;
+
     private Credentials credentials;
     private List<String> defaultRecipients;
     private Map<String, String> additionalHeaders;

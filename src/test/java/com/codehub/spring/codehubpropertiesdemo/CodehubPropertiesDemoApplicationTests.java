@@ -1,5 +1,6 @@
 package com.codehub.spring.codehubpropertiesdemo;
 
+import com.codehub.spring.codehubpropertiesdemo.config.PropertiesConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,16 +18,14 @@ public class CodehubPropertiesDemoApplicationTests {
     @Autowired
     private Environment env;
 
-    @Value("${app.name}")
-    private String appName;
 
-    @Value("${app.description}")
-    private String description;
+    @Autowired
+    private PropertiesConfig propertiesConfig;
 
 
     @Test
     public void givenContext_noException() {
-        assertEquals(env.getProperty("app.name"),appName);
+        assertEquals(env.getProperty("mail.host"),propertiesConfig.getHost());
     }
 
 }

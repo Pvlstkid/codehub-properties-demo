@@ -1,0 +1,5 @@
+mail:
+  profiles: dev
+  host: mailer1@mail.com
+  port: 9001
+  name: mailer1@mail.com

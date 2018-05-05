@@ -1,0 +1,5 @@
+mail:
+  profiles: test
+  host: mailer2@mail.com
+  port: 9002
+  name: mailer2@mail.com

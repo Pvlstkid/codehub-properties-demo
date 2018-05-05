@@ -1,0 +1,15 @@
+mail:
+  host: mailer@mail.com
+  port: 9000
+  name: mailer@mail.com
+  profiles: default
+  defaultRecipients:
+    - admin@mail.com
+    - owner@mail.com
+  additionalHeaders:
+    redelivery: true
+    secure: true
+  credentials:
+    username: john
+    password: password
+    authMethod: SHA1
